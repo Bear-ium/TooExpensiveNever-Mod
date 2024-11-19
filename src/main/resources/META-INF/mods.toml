@@ -1,0 +1,49 @@
+# This is a mods.toml file. It contains metadata for your mod.
+# The format is standard TOML format, v0.5.0. Documentation: https://toml.io/en/
+# Learn more about Forge mods.toml format here: https://docs.minecraftforge.net
+
+# The mod loader type. For regular FML @Mod mods, this should always be "javafml".
+modLoader = "javafml" # Mandatory
+
+# The version range of the loader required by this mod. Typically bumped every Minecraft version.
+loaderVersion = "[43,)" # Mandatory
+
+# The license for your mod. This is mandatory metadata for clarity on redistributive properties.
+license = "${mod_license}" # Mandatory
+
+# A list of mods. This section contains the main metadata for your mod.
+[[mods]] # Mandatory
+
+# The mod ID of the mod. This should match the @Mod annotation in your main mod class.
+modId = "${mod_id}" # Mandatory
+
+# The version of your mod. Match this to your build.gradle version or gradle.properties.
+version = "${mod_version}" # Mandatory
+
+# A display name for your mod, as shown in the mod list.
+displayName = "${mod_name}" # Mandatory
+
+# Authors of the mod.
+authors = "${mod_authors}" # Optional
+
+# A detailed description of your mod. Use triple single quotes for multi-line text.
+description = '''${mod_description}''' # Mandatory
+
+# Dependencies specify other mods or Forge/Minecraft versions your mod needs.
+[[dependencies."${mod_id}"]] # Optional
+
+# Dependency on Forge. This ensures your mod runs with a compatible Forge version.
+modId = "forge" # Mandatory
+mandatory = true # Mandatory
+versionRange = "${forge_version_range}" # Mandatory
+ordering = "NONE" # Optional
+side = "BOTH" # Optional
+
+[[dependencies."${mod_id}"]] # Optional
+
+# Dependency on Minecraft. This ensures your mod runs with a specific Minecraft version.
+modId = "minecraft" # Mandatory
+mandatory = true # Mandatory
+versionRange = "[1.19.2]" # Mandatory
+ordering = "NONE" # Optional
+side = "BOTH" # Optional
