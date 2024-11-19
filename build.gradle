@@ -66,6 +66,7 @@ repositories {
 dependencies {
     // Specify Minecraft Forge dependency
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    implementation 'org.spongepowered:mixin:0.8.5'
 
     // Example: add other mod dependencies here if needed
     // compileOnly fg.deobf("group:artifact:version")
